@@ -1,0 +1,55 @@
+.block-input-icon {
+  label {
+    display: inline-block;
+    margin-bottom: 13px;
+  }
+  .wrapper-input-icon {
+    position: relative;
+    .form-group {
+      input {
+        height: 46px;
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 20px;
+        border: 1px solid $color_8;
+      }
+      label {
+        display: none;
+        text-indent: -9999px;
+      }
+    }
+    .wrapper-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      border-right: 1px solid $color_8;
+      i {
+        font-size: 12px;
+      }
+    }
+  }
+  &.is-invalid {
+    .wrapper-input-icon {
+      .form-group {
+        input {
+          border-color: $color_18;
+        }
+        label {
+          color: $color_18;
+        }
+      }
+      .wrapper-icon {
+        border-color: $color_18;
+        i {
+          color: $color_18;
+        }
+      }
+    }
+  }
+}

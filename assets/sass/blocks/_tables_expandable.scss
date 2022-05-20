@@ -1,0 +1,88 @@
+.block-tables-expandable {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  .wrapper-tables-expandable {
+    .block-table-header-expandable {
+      min-height: 80px;
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 1px solid $color_8;
+      transition: ease-in-out $default_transition_time;
+      &:hover {
+        box-shadow: 0px 0px 24px 0px rgb(0 0 0 / 0.2);
+      }
+      .wrapper-table-header-expandable {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .wrapper-left {
+          height: 100%;
+          display: flex;
+          flex-flow: column;
+          justify-content: space-between;
+          padding-right: 10px;
+          .wrapper-text {
+            &.text-title {
+              font-style: $default_font_heading;
+              font-weight: 700;
+              font-size: 13px;
+              line-height: 16px;
+              text-transform: uppercase;
+              color: $color_7;
+              margin-bottom: 5px;
+            }
+            &.text-description {
+              margin-top: 5px;
+            }
+          }
+        }
+        .wrapper-right {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          padding-left: 10px;
+          .wrapper-icon{
+            margin-left: 7.5px;
+            margin-right: 7.5px;
+            &:first-child{
+              margin-left: 0px;
+            }
+            &.bin{
+              i{
+                color: $color_18
+              }              
+              margin-right: 15px !important;
+            }
+            i{
+              color: $color_4;
+            }
+          }
+        }
+      }
+      &.active {
+        background-color: $color_8;
+        border: none;
+        .wrapper-table-header-expandable {          
+          .wrapper-left {            
+            .wrapper-text {
+              &.text-title {
+                color: $color_6;
+              }
+            }
+          }          
+        }
+      }
+    }
+  }
+}
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .block-tables-expandable {
+    .container{
+      padding: 0px !important;
+    }
+  }
+}

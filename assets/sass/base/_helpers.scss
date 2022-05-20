@@ -1,0 +1,171 @@
+/* Media queries:
+	all - both screen and print (default)
+	screen - desktop and mobile devices with screen
+	print - only print devices
+*/
+/*Box Sizing*/
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* Resets / Forcing default behaviour */
+a {
+  text-decoration: none;
+}
+input,
+button {
+  padding: 0px;
+  border: 0px;
+  &[type="submit"] {
+    cursor: pointer;
+  }
+}
+a,
+button {
+  outline: none !important;
+}
+@include placeholder {
+  color: rgba($color_2, 0.3);
+  font-weight: 500;
+}
+ol,
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+iframe {
+  display: block;
+}
+p {
+  margin-bottom: 20px;
+}
+b,
+strong {
+  font-weight: 700;
+}
+input,
+textarea,
+select,
+button {
+  -webkit-appearance: none !important;
+}
+select,
+button {
+  cursor: pointer;
+}
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-color: rgba($color_1, 0.3);
+}
+/* Hides number input arrows: Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* Generic helpers */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.responsive-table-wrapper {
+  overflow: auto;
+}
+.row {
+  &.direct-childs-collapsible {
+    & > div {
+      flex: 0 1 auto;
+      width: auto;
+    }
+  }
+}
+//For validation errors
+.invalid {
+  position: relative;
+  .inputblock-message-error {
+    div {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      color: $color_1;
+      transform: translateY(100%);
+      font-size: 11px;
+    }
+  }
+}
+.wrapper-image {
+  height: 100%;
+}
+img {
+  max-width: 100%;
+}
+.overflow-disable {
+  overflow: hidden !important;
+}
+.block {
+  margin: 39px 0;
+}
+.wrapper-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.obligate {
+  &::after {
+    content: "*";
+    padding-left: 3px;
+    color: $color_11;
+  }
+}
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 0 0 1px $color_2;
+  outline-offset: 0px;
+  outline: none;
+}
+//Additional classes for boostrap
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .p0-lg {
+    padding: 0 !important;
+  }
+  .m0-lg {
+    margin: 0 !important;
+  }
+}
+
+//Dynamic Height
+@for $i from 0 through 300 {
+  .h-#{$i} {
+    height: #{$i}px !important;
+  }
+}
+@for $i from 0 through 300 {
+  .w-#{$i} {
+    height: #{$i}px !important;
+  }
+}

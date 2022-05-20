@@ -1,0 +1,66 @@
+.block-checkbox {
+  input {
+    display: none;
+    &[type="checkbox"] {
+      & + label {
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        @include noselect();
+        line-height: 15px;
+        &::before {
+          flex: 1 0 auto;
+          display: inline-block;
+          content: "";
+          width: 16px;
+          height: 16px;
+          margin-right: 7px;
+          border: 1px solid $color_8;
+        }
+      }
+      &:checked {
+        & + label {
+          &::before {
+            @include bgimgin("ic_checkmark.svg");
+            background-size: 10px;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+    &[type="radio"] {
+      & + label {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        @include noselect();
+        line-height: 15px;
+        &::before {
+          content: "";
+          flex: 1 0 auto;
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          border-radius: 100%;
+          margin-right: 7px;
+          border: 1px solid $color_8;
+        }
+      }
+      &:checked {
+        & + label {
+          &::before {
+            @include bgimgin("ic_checkmark_circle.svg");
+            background-size: 10px;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+}

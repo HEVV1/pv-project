@@ -1,0 +1,31 @@
+.block-button-menu {
+  position: absolute;
+  top: 22px;
+  left: 27px;
+  display: flex;
+  flex-flow: column;
+  cursor: pointer;
+  z-index: 1;
+  transition: ease-in-out $default_transition_time;
+  .line {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 31px;
+    height: 3px;
+    background-color: $color_1;
+  }
+  &.inactive {
+    visibility: 0;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .block-button-menu {
+    .line {
+      width: 22px;
+      height: 2px;
+    }
+  }
+}

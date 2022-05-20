@@ -1,0 +1,57 @@
+.block-contracts {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  .wrapper-contracts {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $color_8;
+    transition: ease-in-out $default_font_heading;
+    transition: box-shadow $default_transition_time ease-in-out;
+    cursor: pointer;
+    .wrapper-text {
+      h4 {
+        transition: ease-in-out $default_transition_time;
+        color: $color_7;
+      }
+    }
+    .wrapper-icon {
+      position: relative;
+      width: 12px;
+      height: 15px;
+      img {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        transition: ease-in-out $default_transition_time;
+        &.ic-contracts-black {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+    &:hover {
+      border-color: rgba($color: $color_8, $alpha: 0);
+      box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+      .wrapper-text {
+        h4 {
+          color: $color_4;
+        }
+      }
+      .wrapper-icon {
+        img {
+          &.ic-contracts-black {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+}

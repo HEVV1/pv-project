@@ -1,0 +1,14 @@
+.block-page-worker-graphic {
+  .block-page-worker-graphic {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .block-page-worker-graphic {
+    .block-page-worker-graphic {
+      margin-top: 20px;     
+    }
+  }  
+}

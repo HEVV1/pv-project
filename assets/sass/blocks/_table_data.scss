@@ -1,0 +1,97 @@
+.block-table-data {
+  .wrapper-table-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $color_26;
+    .wrapper-text-icon {
+      display: flex;
+      align-items: center;
+      .wrapper-icons {
+        display: flex;
+        align-items: center;
+        a {
+          margin-right: 10px;
+          margin-left: 10px;
+          .wrapper-icon {
+            display: flex;
+            align-items: center;
+            width: 8px;
+          }
+        }
+      }
+    }
+    .wrapper-stations {
+      display: flex;
+      align-items: center;
+      .station-line {
+        background-color: $color_26;
+        width: 30px;
+        height: 2px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .wrapper-link {
+        a {
+          font-family: $default_font_heading;
+          font-size: 17px;
+          line-height: 20px;
+          font-weight: 700;
+          color: $color_6;
+          transition: ease-in-out 150ms;
+          border-bottom: 1px solid rgba($color: $color_6, $alpha: 1);
+          &:hover {
+            color: $color_3;
+            border-bottom: 1px solid rgba($color: $color_3, $alpha: 1);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .block-table-data {
+    .wrapper-table-data {
+      flex-flow: column;
+      align-items: flex-end;
+      border: none;
+      margin: 0;
+      padding: 0;
+      .wrapper-text-icon {
+        margin-bottom: 20px;
+      }
+      .wrapper-station-outer-content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        .wrapper-stations {          
+          overflow: auto;         
+          .wrapper-text {
+            h4 {
+              font-size: 14px;
+              line-height: 18px;
+              white-space: nowrap;
+            }
+          }
+          .wrapper-link {
+            a {
+              font-size: 14px;
+              line-height: 18px;
+            }
+          }
+          .station-line {
+            width: 10px;
+            min-width: 10px;
+            margin-left: 6px;
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+  }
+}

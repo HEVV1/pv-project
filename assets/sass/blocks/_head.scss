@@ -1,0 +1,44 @@
+.block-head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  .wrapper-head {
+    position: relative;
+    span {
+      font-family: $default_font_heading;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 46px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -55%;
+      height: 55px;
+      width: 100%;
+      background: $color_8;
+      transform: translateY(-50%) translateX(-50%) skew(-20deg);
+    }
+  }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .block-head {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .wrapper-head {
+      span {
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 900;
+      }
+      &::before {
+        left: -53%;
+        height: 34px;
+      }
+    }
+  }
+}

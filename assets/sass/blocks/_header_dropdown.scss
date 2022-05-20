@@ -1,0 +1,50 @@
+.block-header-dropdown {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  padding-top: 22px;
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: ease-in-out 150ms;
+  z-index: 11;
+  .wrapper-header-dropdown {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: $color_4;
+    .wrapper-link {
+      display: flex;
+      align-items: center;
+      transition: ease-in-out $default_transition_time;
+      cursor: pointer;
+      &.exit {
+        position: relative;
+        text-transform: uppercase;
+        &::after {
+          font-family: $font_awesome_5_pro;
+          content: "\f2f5";
+          position: absolute;
+          right: 0%;
+          transform: translateX(-50%);
+          color: $color_3;
+          font-size: 15px;
+        }
+      }
+      a {
+        display: block;
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 15px;
+        line-height: 17px;
+        font-weight: 400;
+        color: $color_1;
+      }
+      &:hover {
+        background-color: $color_5;
+      }
+    }
+  }
+}

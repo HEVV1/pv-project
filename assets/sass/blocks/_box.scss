@@ -1,0 +1,76 @@
+.block-box {
+  height: 80px;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid $color_4;
+  &.small {
+    flex: 1 0 auto;
+    width: 100%;
+  }
+  &.big {
+    max-width: 367px;
+    width: 100%;
+  }
+  &.sub-box {
+    @for $i from 1 through 4 {
+      &.sub-box-#{$i} {
+        margin-left: 27px * $i;
+      }
+    }
+  }
+
+  .line {
+    display: inline-block;
+    position: absolute;
+    background-color: $color_4;
+    &.bottom-line {
+      width: 1px;
+      height: 31px;
+      left: 50%;
+      top: 100%;
+      transform: translateX(-50%);
+    }
+    &.top-line {
+      width: 0px;
+      height: 31px;
+      left: 50%;
+      bottom: 100%;
+      transform: translateX(-50%);
+      background-color: unset;
+      border-left: 2px dotted $color_4;
+    }
+    &.left-line {
+      width: 17px;
+      height: 1px;
+      right: 100%;
+      bottom: 50%;
+      transform: translateY(-50%);
+    }
+    &.right-line {
+      width: 17px;
+      height: 1px;
+      left: 100%;
+      bottom: 50%;
+      transform: translateY(-50%);
+    }
+    &.sub-line {
+      width: 1px;
+      height: 70px;
+      left: 10px;
+      top: 100%;
+    }
+  }
+
+  .wrapper-text {
+    text-align: center;
+    span {
+      white-space: normal;
+    }
+  }
+}

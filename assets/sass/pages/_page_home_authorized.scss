@@ -1,0 +1,14 @@
+.page-home-authorized {
+  .wrapper-page-home-authorized-1 {
+    margin-top: 115px;
+  }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .page-home-authorized {
+    .wrapper-page-home-authorized-1 {
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+  }
+}

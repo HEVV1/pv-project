@@ -1,0 +1,13 @@
+.button {
+  display: inline-block;
+  min-width: 176px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  transition: ease-in-out $default_transition_time;
+  text-transform: uppercase;
+}

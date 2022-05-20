@@ -1,0 +1,29 @@
+.block-row-counter {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  .wrapper-row-counter {
+    position: relative;
+    display: inline-block;
+    select {
+      width: 60px;
+      height: 30px;
+      font-family: $default_font_heading;
+      font-size: 16px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .wrapper-icon {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateX(-50%) translateY(-50%);
+      pointer-events: none;
+    }
+  }
+}
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .block-row-counter {
+    margin-left: 27px;
+    margin-right: 27px;
+  }
+}

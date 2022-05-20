@@ -1,0 +1,90 @@
+.block-icon-text {
+  display: block;
+  position: relative;
+  transition: ease-in-out $default_transition_time;
+  &.header-icon{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  &:last-child{
+    margin-right: 0;
+  }
+  button {
+    background: none;
+    height: 100%;
+    width: 100%;
+  }
+  .wrapper-icon-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .wrapper-icon {
+      i {
+        color: $color_3;
+        &.fas {
+          &.fa-envelope {
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+    .wrapper-text {
+      padding-left: 10px;
+      span {        
+        color: $color_1;
+        white-space: nowrap;
+      }
+      h3{
+        white-space: nowrap;
+      }
+    }
+  }
+  &.my-profile {
+    // transition: ease-in-out $default_transition_time;
+    &:hover {
+      .block-header-dropdown {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  &.notification {
+    transition: ease-in-out $default_transition_time;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 90%;
+      left: 80%;
+      width: 4px;
+      height: 4px;
+      border-radius: 100%;
+      background-color: $color_11;
+    }
+  }
+  //Manage icons on click
+  &.move-search-992 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    transform: translateX(88px);
+    transition: ease-in-out $default_transition_time;
+    height: 30px;
+    width: 30px;
+    i {
+      color: $color_4 !important;
+    }
+  }
+  &.inactive {
+    margin-right: 15px !important;
+    margin-left: 15px !important;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .block-icon-text {
+    &.header-icon{
+      margin-right: 7.5px;
+      margin-left: 7.5px;
+    }
+  }
+}

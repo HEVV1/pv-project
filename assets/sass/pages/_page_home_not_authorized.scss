@@ -1,0 +1,14 @@
+.page-home-not-authorized {
+  .wrapper-page-home-not-authorized-default {
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .page-home-not-authorized {
+    .wrapper-page-home-not-authorized-default {
+      margin-bottom: 50px;
+    }
+  }
+}

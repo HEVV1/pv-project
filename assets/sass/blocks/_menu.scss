@@ -1,0 +1,130 @@
+.block-menu {
+  position: sticky;
+  top: 0;
+  left: 0;
+  flex: 0 0 auto;
+  width: 305px;
+  background-color: $color_1;
+  height: 100vh;
+  max-height: 100vh;
+  min-height: 100vh;
+  box-shadow: 0px 0px 24px 0px rgb(0 0 0 / 0.2);
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: ease-in-out $default_transition_time;
+  padding-top: 150px;
+  z-index: 99;
+  .wrapper-menu {
+    min-width: 305px;
+    display: flex;
+    flex-flow: column;
+    .cancel {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 31px;
+      height: 24px;
+      cursor: pointer;
+      .line {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: $color_4;
+        &.line-1 {
+          top: 50%;
+          transform: translateY(-50%) rotateZ(45deg);
+        }
+        &.line-2 {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%) rotateZ(-45deg);
+        }
+      }
+    }
+    .wrapper-image {
+      display: none;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .wrapper-link {
+      position: relative;
+      padding-left: 105px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      a {
+        font-family: $default_font_heading;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 600;
+        color: $color_4;
+      }
+      &.link-icons {
+        &:after {
+          content: "";
+          position: absolute;
+          top: 3px;
+          left: 42px;
+          width: 19px;
+          height: 15px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+      &.icon-home {
+        &:after {
+          @include bgimgin("ic_link_home.svg");
+        }
+      }
+      &.icon-it {
+        &:after {
+          @include bgimgin("ic_link_it.svg");
+        }
+      }
+      &.icon-group {
+        &:after {
+          @include bgimgin("ic_link_group.svg");
+        }
+      }
+      &.icon-file {
+        &:after {
+          @include bgimgin("ic_link_file.svg");
+        }
+      }
+      &.icon-teacher {
+        &:after {
+          @include bgimgin("ic_link_teacher.svg");
+        }
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50px;
+        width: 24px;
+        height: 21px;
+        background-color: $color_3;
+        transform: skew(-15deg);
+        transition: ease-in-out $default_transition_time;
+      }
+      &.active:before {
+        width: 42px;
+      }
+    }
+  }
+  &.inactive {
+    width: 0;
+  }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: "md") - 1px) {
+  .block-menu {
+    position: fixed;
+    left: 0;
+    width: 305px;
+    &.inactive {
+      width: 305px;
+      transform: translateX(-330px);
+    }
+  }
+}

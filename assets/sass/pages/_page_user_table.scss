@@ -1,0 +1,33 @@
+.page-user-table {
+  .wrapper-page-user-table {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .wrapper-page-user-table-expandable{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .wrapper-page-tables-expandable-button{
+      height: 40px;
+      .container{
+        position: relative;
+        .wrapper-text{
+          // margin-left: 60px;
+        }
+      }      
+    }
+  }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .page-user-table {
+    .wrapper-page-user-table-expandable{      
+      .wrapper-page-tables-expandable-button{        
+        .container{          
+          .wrapper-text{
+            margin-left: 60px;
+          }
+        }      
+      }
+    }
+  }
+}

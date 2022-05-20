@@ -1,0 +1,43 @@
+/* Colors -----------------------------------------------------------------*/
+$color_1: #ffffff; // White
+$color_2: #000000; // Black
+$color_3: #f7b500; // Oranžais
+$color_4: #2e3438; // tumšs
+$color_5: #52595d; // teksts
+$color_6: #00acc1; // gaiši zils
+$color_7: #a7b2ba; // pelēks
+$color_8: #dce7ea; // gaiši pelēks
+$color_9: #f7fafc; // fons
+$color_10: #eff6f8; // table color
+$color_11: #f70000; // Notification color
+$color_12: #f1f1f1; // Light Grey
+$color_13: #00acc2; // Very Light Blue
+$color_14: #e3f6f9; // Ultra Light Blue
+$color_15: #fefaef; //Light Orange
+$color_16: #ecf3f3; //UltraLight Green
+$color_17: #34d674; //Green
+$color_18: #eb5757; //Light Red
+$color_19: #DDE3E6; //Ultra Light Grey
+$color_20: #C6E1E6; //Ultra Light Green
+$color_21: #EFE7E9; //Ultra Light Red
+$color_22: #42484C; //Dark Grey
+$color_23: #0000FF; //Pure Blue
+$color_24: #FFFF00; //Pure Yellow
+$color_25: #FF0000; //Pure Red
+$color_26: #DCE7E9; //For Thick line
+/* Fonts------------------------------------------------------------------*/
+$font_awesome_5_pro: "Font Awesome 5 Pro";
+$font_stack_roboto: "Roboto", sans-serif;
+$default_font_heading: "HurmeGeometricSans2";
+$default_font_stack: $font_stack_roboto;
+
+$default_font_size: 14px;
+$default_font_weight: 400;
+$default_line_height: 16px;
+$default_font_color: $color_4;
+
+/* Other ------------------------------------------------------------------*/
+
+$regular_content_width: 870px + 54px; // content + outside gutter (left and right together)
+$image_directory: "../../images/";
+$default_transition_time: 300ms;

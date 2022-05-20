@@ -1,0 +1,44 @@
+.block-menu-table{
+  position: fixed;
+  right: 0;
+  top: 240px;    
+  background-color: $color_22;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  max-width: 300px;
+  width: 100%;
+  padding-right: 100px;
+  padding-left: 40px;
+  transform: translateX(100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: ease-in-out $default_transition_time;
+  z-index: 98;
+  .wrapper-menu-table{
+    nav{
+      li{
+        margin-top: 17px;
+        margin-bottom: 17px;
+        text-align: right;
+        a{
+          font-family: $default_font_heading;
+          font-size: 17px;
+          line-height: 20px;
+          font-weight: 700;
+          color: $color_1; 
+          transition: ease-in-out 150ms;  
+          border-bottom: 1px solid rgba($color: $color_3, $alpha: 0);
+          &:hover{
+            color: $color_3;
+            border-bottom: 1px solid rgba($color: $color_3, $alpha: 1);
+          }       
+        }
+      }
+    }
+  }
+  &.active{
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

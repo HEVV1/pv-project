@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+// definitions
+@import 
+  "base/variables",
+  "base/mixins",
+  "base/fonts",
+  "../../fonts/fontawesome-pro-5.12.0-web/css/all.min.css";
+// bootstrap
+@import
+  "vendors/normalize",
+  "vendors/bootstrap/bootstrap-variables-override",
+  "../../assets/node_modules/bootstrap/scss/bootstrap-grid",
+  "vendors/jquery-ui-1.12.1.custom/jquery-ui.min";
+// base
+@import 
+  "base/helpers",
+  "base/helpers",
+  "base/base",
+  "base/typography";
+// components
+@import 
+  "components/button",
+  "components/button_primary",
+  "components/button_menu",
+  "components/button_filter",
+  "components/button_support_navigation",
+  "components/button_tables",
+  "components/input",
+  "components/input_icon",
+  "components/input_bases",
+  "components/input_select",
+  "components/input_textarea",
+  "components/input_datepicker",
+  "components/input_table",
+  "components/search",
+  "components/search_header",
+  "components/checkbox",
+  "components/row_counter";
+// blocks
+@import    
+  "blocks/link",
+  "blocks/job_offer",
+  "blocks/questions",
+  "blocks/heading",
+  "blocks/instruction",
+  "blocks/employee",
+  "blocks/employee_group",
+  "blocks/contracts",
+  "blocks/side_text",
+  "blocks/blockquote_message",
+  "blocks/image_picker",
+  "blocks/chart",
+  "blocks/filter",
+  "blocks/filter_checkboxes",
+  "blocks/filter_parameters",
+  "blocks/box",
+  "blocks/tree_element",
+  "blocks/workers_structure",
+  "blocks/worker_structure_tree",
+  "blocks/icon_text",
+  "blocks/header_dropdown",
+  "blocks/image_link",
+  "blocks/static_boxes", 
+  "blocks/question",
+  "blocks/menu",
+  "blocks/menu_table",
+  "blocks/support_menu",
+  "blocks/dropdown_link",
+  "blocks/history_links",
+  "blocks/head",
+  "blocks/user_banner",
+  "blocks/table",
+  "blocks/tables",
+  "blocks/table_header",
+  "blocks/link_management",
+  "blocks/support_icon",
+  "blocks/support_info",
+  "blocks/support_navigation",
+  "blocks/steps",
+  "blocks/news",
+  "blocks/other_news",
+  "blocks/other_news_slider",
+  "blocks/source",
+  "blocks/vacancy",
+  "blocks/slider",
+  "blocks/popup",
+  "blocks/login",
+  "blocks/table_data",
+  "blocks/tables_expandable",
+  "blocks/element_dots",
+  "blocks/menu_table_expandable",
+  "blocks/swaper",
+  "blocks/phone_book_group",
+  "blocks/phone_book";
+
+//Layouts 
+@import
+  "layouts/header",
+  "layouts/form",
+  "layouts/footer";
+//Pages
+@import
+  "pages/page_home_authorized",
+  "pages/page_user_table",
+  "pages/page_it_support",
+  "pages/page_it_equipment",
+  "pages/page_equipment_registration",
+  "pages/page_home_not_authorized",
+  "pages/page_licenses",
+  "pages/page_vacancies",
+  "pages/page_worker_graphic",
+  "pages/page_worker",
+  "pages/page_phone_book";
+// overrides
+@import
+  "overrides/ff_only",
+  "overrides/safari_only",
+  "overrides/ie10+",
+  "overrides/print";

@@ -1,0 +1,27 @@
+.button-primary {
+  color: $color_4;
+  background-color: $color_3;
+  text-align: center;
+  position: relative;
+  &.button-secondary {
+    background-color: $color_4 !important;
+    color: $color_3 !important;
+  }
+  &.arrow {
+    margin-right: 24px;
+    &:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      right: -24px;
+      transform: translateY(-50%);
+      @include bgimgin("ic_button_arrow.svg");
+      width: 38px;
+      height: 5px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.block-filter {
+  .wrapper-filter {
+    .block-filter-top {
+      overflow-y: hidden;
+      overflow-x: auto;
+      padding-left: 23px;
+      padding-right: 23px;
+      display: flex;
+      align-items: center;
+      background-color: $color_1;
+      border: 1px solid $color_8;
+      .wrapper-choosed-parameters {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        margin-left: 7px;
+        margin-right: 7px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        background-color: $color_7;
+        &:first-child {
+          margin-left: 0;
+        }
+        .wrapper-icon {
+          cursor: pointer;
+          i {
+            margin-top: 2px;
+            font-size: 15px;
+            transform: rotateZ(45deg);
+            margin-right: 4px;
+            color: $color_4;
+          }
+        }
+        .wrapper-text {
+          white-space: nowrap;
+        }
+      }
+      .wrapper-input {
+        width: 100%;
+        .form-group {
+          input {
+            min-width: 200px;
+            width: 100%;
+            height: 26px;
+            padding-right: 7px;
+            &:focus {
+              outline: none !important;
+              box-shadow: unset;
+            }
+          }
+          label {
+            display: none;
+            text-indent: -9999px;
+          }
+        }
+      }
+    }
+    .block-filter-dropdown {
+      max-height: 175px;
+      background-color: $color_1;
+      overflow: auto;
+      border-left: 1px solid $color_8;
+      border-right: 1px solid $color_8;
+      border-bottom: 1px solid $color_8;
+      display: none;
+      .wrapper-filter-dropdown {
+        display: flex;
+        flex-flow: column;
+        .wrapper-text {
+          padding-left: 22px;
+          padding-right: 22px;
+          padding-top: 3px;
+          padding-bottom: 3px;
+          cursor: pointer;
+          span {
+            font-style: $default_font_stack;
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 400;
+          }
+          &:hover {
+            background-color: $color_7;
+          }
+          &.innactive {
+            display: none;
+          }
+        }
+      }
+      &.active {
+        display: block;
+      }
+    }
+  }
+}

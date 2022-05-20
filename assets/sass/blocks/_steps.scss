@@ -1,0 +1,104 @@
+.block-steps {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  .wrapper-steps {
+    display: flex;
+    align-items: center;
+    .wrapper-image {
+      width: 25px;
+      margin-left: 26px;
+      margin-right: 26px;
+      flex: 0 0 auto;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .links {
+      display: flex;
+      align-items: center;
+      .wrapper-link {
+        margin-left: 10px;
+        margin-right: 10px;
+        a {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          flex: 1 0 auto;
+          background-color: $color_9;
+          width: 40px;
+          height: 40px;
+          border: 1px solid $color_8;
+          transition: ease-in-out $default_transition_time;
+          color: $color_4;
+          &:hover {
+            background-color: $color_3;
+          }
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        &.active {
+          a {
+            background-color: $color_8;
+          }
+        }
+      }
+    }
+    .dots {
+      display: flex;
+      align-items: flex-end;
+      height: 40px;
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+  }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .block-steps {
+    .wrapper-steps {
+      justify-content: center;
+      .wrapper-image {
+        display: flex;
+        height: 25px;
+        margin: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+        a {
+          display: inline-flex;
+        }
+      }
+      .links {
+        .wrapper-link {
+          margin-left: 3px;
+          margin-right: 3px;
+          a {
+            width: 25px;
+            height: 25px;
+            font-size: 8px;
+          }
+        }
+      }
+      .dots {
+        margin-left: 12px;
+        margin-right: 12px;
+        height: 15px;
+      }
+    }
+  }
+}

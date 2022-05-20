@@ -1,0 +1,44 @@
+.block-workers-structure {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: none;
+  .wrapper-workers-structure {
+    display: flex;
+    .left-side {
+      margin-top: -15px;
+      margin-bottom: -15px;
+      width: 180px;
+      .wrapper-text {
+        text-align: center;
+        &.text {
+          margin-top: 15px;
+          margin-bottom: 15px;
+          span {
+            line-height: 50px;
+          }
+        }
+      }
+    }
+    .middle-side {
+      display: flex;
+      align-items: center;
+      padding-left: 16px;
+      padding-right: 15px;
+      .middle-line {
+        background-color: $color_4;
+        width: 1px;
+        height: calc(100% - 80px);
+      }
+    }
+    .right-side {
+      margin-top: -15px;
+      margin-bottom: -15px;
+      width: 100%;
+      display: flex;
+      flex-flow: column;
+    }
+  }
+  &.active{
+    display: block;
+  }
+}

@@ -1,0 +1,71 @@
+.block-table-header {
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: $color_4;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  .container {
+    padding-left: 27px !important;
+    padding-right: 27px !important;
+  }
+  .wrapper-table-header {
+    .table-header-navigation-bar {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+      a {
+        flex-basis: 25%;
+        max-width: 25%;
+        color: $color_1;
+        position: relative;
+        padding-left: 30px;
+        &:hover {
+          text-decoration: underline;
+        }
+        &:before {
+          font-family: $font_awesome_5_pro;
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform: translateY(1px);
+          width: 16px;
+          height: 16px;
+          color: $color_3;
+        }
+        &.print {
+          &:before {
+            content: "\f02f";
+          }
+        }
+        &.edit {
+          &:before {
+            content: "\f044";
+          }
+        }
+        &.plus {
+          &:before {
+            content: "\f067";
+          }
+        }
+        &.trash {
+          &:before {
+            content: "\f2ed";
+          }
+        }
+        &.archive {
+          &:before {
+            content: "\f187";
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .block-table-header {
+    display: none;
+  }
+}

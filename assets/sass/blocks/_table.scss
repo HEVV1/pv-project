@@ -1,0 +1,362 @@
+.block-table {
+  width: 100%;
+  height: 100%;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    tr {
+      height: 40px;
+      &:nth-child(odd) {
+        background-color: $color_10;
+      }
+      &:nth-child(even) {
+        background-color: $color_8;
+      }
+    }
+    thead {
+      tr {
+        th {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
+    }
+    tbody {
+      td {
+        padding-left: 15px;
+        padding-right: 15px;
+        border-right: 1px solid $color_1;
+        &:last-child {
+          border: none;
+        }
+        &.green {
+          color: $color_17;
+        }
+        &.red {
+          color: $color_18;
+        }
+      }
+    }
+  }
+  // Particular design
+  &.table-default {
+    table {
+      tbody {
+        tr {
+          td {
+            width: 100%;
+            max-width: 20%;
+            flex-basis: 20%;
+            font-size: 14px;
+            line-height: 16px;
+            border: none;
+            &:first-child {
+              border-right: 1px solid $color_1;
+            }
+            &:last-child {
+              border-left: 1px solid $color_1;
+            }
+            &.col-header {
+              font-weight: 700;
+            }
+            &.row-space {
+              width: 100%;
+              max-width: 20%;
+              flex-basis: 20%;
+            }
+          }
+          &.row-hidden {
+            display: none;
+            td {
+              text-align: left !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.table-equipment {
+    table {
+      thead {
+        tr {
+          th {
+            position: relative;
+            padding-top: 11px;
+            padding-bottom: 11px;
+            min-height: 67px;
+            background-color: $color_4;
+            text-align: left;
+            color: $color_1;
+            border-left: 1px solid $color_1;
+            border-right: 1px solid $color_1;
+            span {
+              display: block;
+              width: 100%;
+              white-space: nowrap;
+              cursor: pointer;
+            }
+            &:first-child {
+              border: none;
+            }
+            &:last-child {
+              border: none;
+            }
+            .wrapper-icon {
+              i {
+                cursor: pointer;
+                position: absolute;
+                top: 11px;
+                right: 20px;
+              }
+            }
+          }
+        }
+      }
+      tbody {
+        tr{
+          display: none;
+          &.active{
+            display: table-row;
+          }
+        }
+        td {
+          text-align: left;
+          &.wrapper-text-icon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 40px;
+            .wrapper-icons {
+              display: flex;
+              height: 100%;
+              align-items: center;
+              .wrapper-icon {
+                margin-left: 10px;
+                margin-right: 10px;
+                i {
+                  color: $color_7;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.table-service {
+    table {
+      tbody {
+        td {
+          text-align: center;
+          &.progress {
+            background-color: $color_19;
+          }
+          &.done {
+            color: $color_6;
+            background-color: $color_20;
+          }
+          &.canceled {
+            color: $color_18;
+            background-color: $color_21;
+          }
+          &.wrapper-text-icon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 40px;
+            .wrapper-icons {
+              display: flex;
+              height: 100%;
+              align-items: center;
+              .wrapper-icon {
+                margin-left: 10px;
+                margin-right: 10px;
+                i {
+                  color: $color_7;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.table-graphic {
+    width: 100%;
+    height: 400px;
+    overflow: scroll;    
+    table {
+      border-spacing: 0;
+      tbody {
+        tr {
+          &:nth-child(odd) {
+            td:nth-child(1) {
+              background-color: $color_10;
+            }
+          }
+          &:nth-child(even) {
+            td:nth-child(1) {
+              background-color: $color_8;
+            }
+          }
+        }
+      }
+      th {
+        position: sticky;
+        top: 0;
+        padding: 5px;
+        width: 80px;
+        min-width: 80px;
+        border-left: none;
+        background-color: $color_4;
+        border-right: 1px solid $color_1;
+        &.blue {
+          background-color: $color_23;
+        }
+        &.yellow {
+          background-color: $color_24;
+        }
+        &.red {
+          background-color: $color_25;
+        }
+        p {
+          font-weight: 700;
+          color: $color_1;
+          line-height: 15px;
+        }
+        &:nth-child(1) {
+          position: sticky;
+          left: 0;
+          width: 150px;
+          min-width: 150px;
+          z-index: 2;
+        }
+      }
+      td {
+        padding: 5px;
+        width: 80px;
+        min-width: 80px;
+        border-left: none;
+        border-right: 1px solid $color_1;
+        &.blue {
+          background-color: rgba($color: $color_23, $alpha: 0.3);
+        }
+        &.yellow {
+          background-color: rgba($color: $color_24, $alpha: 0.3);
+        }
+        &.red {
+          background-color: rgba($color: $color_25, $alpha: 0.3);
+        }
+        p {
+          text-align: center;
+        }
+        &:nth-child(1) {
+          position: sticky;
+          left: 0;
+          width: 150px;
+          min-width: 150px;
+          p {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+  &.table-expandable {
+    display: none;
+  }
+  // Behaviour
+  &.scrollable {
+    scroll-behavior: smooth;
+    .button-scroll-left {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: calc(100% - 17px);
+      width: 135px;
+      background-color: rgba($color: $color_1, $alpha: 0.8);
+      display: flex;
+      align-items: center;
+      transition: ease-in-out $default_transition_time;
+      z-index: 10;
+      cursor: pointer;
+      .wrapper-icon {
+        margin-left: 25px;
+        width: 14px;
+      }
+      &:hover {
+        background-color: rgba($color: $color_1, $alpha: 0.95);
+      }
+      &.inactive {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
+  &.responsive {
+    &.active {
+      overflow: auto;
+      scroll-behavior: smooth;
+      table {
+        width: 1500px;
+      }
+    }
+  }
+}
+@media (max-width: map-get($map: $grid-breakpoints, $key: "xl") - 1px) {
+  .block-table {
+    table {
+      thead {
+        tr {
+          th {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        }
+      }
+      tbody {
+        td {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .block-table {
+    &.table-default {
+      table {
+        tbody {
+          tr {
+            td {
+              width: 100%;
+              max-width: 50%;
+              flex-basis: 50%;
+              &:first-child {
+                border-right: 1px solid $color_1;
+              }
+              &:last-child {
+                border-left: 1px solid $color_1;
+              }
+              &.row-space {
+                display: none;
+              }
+              &.second-column-visible {
+                display: none;
+              }
+            }
+            &.row-hidden {
+              display: table-row;
+            }
+          }
+        }
+      }
+    }
+    &.scrollable {
+      .button-scroll-left {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.block-static-boxes {
+  .block-static-box {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .wrapper-static-box {
+      .wrapper-text {
+        padding-left: 35px;
+        padding-right: 35px;
+        &.header {
+          width: 100%;
+          padding-top: 1px;
+          padding-bottom: 1px;
+          &.black {
+            background-color: $color_4;
+          }
+          &.lightblue {
+            background-color: $color_13;
+          }
+          &.orange {
+            background-color: $color_3;
+          }
+        }
+      }
+      nav {
+        display: flex;
+        flex-flow: column;
+        &.lightgrey {
+          background-color: $color_12;
+        }
+        &.ultralightblue {
+          background-color: $color_14;
+        }
+        &.lightorange {
+          background-color: $color_15;
+        }
+        &.lightgreen {
+          background-color: $color_16;
+        }
+        a {
+          padding-top: 7.5px;
+          padding-bottom: 7.5px;
+          padding-left: 35px;
+          padding-right: 35px;
+          transition: ease-in-out $default_transition_time;
+          &:hover {
+            color: $color_4 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .block-static-boxes {
+    .col {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    .block-static-box {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}

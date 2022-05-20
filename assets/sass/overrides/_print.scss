@@ -1,0 +1,40 @@
+@media print {
+  //Hide blocks
+  .block-menu,  
+  .layout-header,
+  .block-button-tables,
+  .block-input-table {
+    display: none;
+  }
+  //Hide components
+  button,
+  .button-filter{
+    display: none;
+  }
+  //Hide icons
+  .fas {
+    &.fa-pen {
+      display: none;
+    }
+  }
+  .far {
+    &.fa-search {
+      display: none;
+    }
+  }
+  .fas {
+    &.fa-chevron-down {
+      display: none;
+    }
+  }
+  .fas {
+    &.fa-edit {
+      display: none;
+    }
+  }
+  //Particular pages wrappers
+  .wrapper-page-tables-expandable-button,
+  .wrapper-page-it-equipment-filter{
+    display: none;
+  }
+}

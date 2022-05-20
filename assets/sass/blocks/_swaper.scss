@@ -1,0 +1,34 @@
+.block-swaper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  .wrapper-swaper {
+    display: flex;
+    align-items: center;
+    .separator {
+      margin-left: 25px;
+      margin-right: 25px;
+      color: $color_7;
+    }
+    .wrapper-link {
+      a {
+        transition: ease-in-out $default_transition_time;
+        color: $color_7;
+        &:hover {
+          color: $color_4;
+        }
+      }
+      &.current-page {
+        a {
+          color: $color_4;
+          border-bottom: 2px solid $color_6;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .block-history-links {
+    display: none;
+  }
+}

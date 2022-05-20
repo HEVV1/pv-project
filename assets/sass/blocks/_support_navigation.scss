@@ -1,0 +1,44 @@
+.block-support-navigation {
+  padding-top: 25px;
+  padding-left: 20px;
+  margin-left: 50px;
+  .wrapper-support-navigation {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 25px;
+    nav {
+      display: inline-flex;
+      flex-flow: column;
+      a {
+        margin-top: 7.5px;
+        margin-bottom: 7.5px;
+        transition: ease-in-out $default_transition_time;
+        &:hover {
+          color: $color_3;
+        }
+        &.active {
+          color: $color_3;
+        }
+      }
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -20px;
+      transform: translateY(-50%);
+      display: inline-block;
+      width: 1px;
+      height: 100%;
+      background-color: $color_8;
+    }
+  }
+  &.nav-menu {
+    display: block !important;
+  }
+}
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .block-support-navigation {
+    display: none;
+  }
+}

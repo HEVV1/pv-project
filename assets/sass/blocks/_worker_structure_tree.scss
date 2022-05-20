@@ -1,0 +1,26 @@
+.block-worker-structure-tree {  
+  position: relative;
+  &.parent-content {
+    .line {
+      &.parent-line{
+        position: absolute;
+        left: 6px;
+        top: 46px;
+        height: calc(100% - 68px);
+        width: 1px;
+        background-color: $color_7;
+        pointer-events: none;
+      }
+    }
+    .expandable-content{
+      display: none;      
+    }
+  }
+  &.child-content {
+    margin-left: 30px;
+  }
+  .wrapper-structure-tree-content-element{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

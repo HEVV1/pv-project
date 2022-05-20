@@ -1,0 +1,35 @@
+.block-blockquote-message {
+  .wrapper-blockquote-message {
+    position: relative;
+    background-color: $color_8;
+    padding-left: 71px;
+    padding-right: 71px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    z-index: 0;
+    &::before {
+      position: absolute;
+      top: 30px;
+      left: 34px;
+      display: inline-block;
+      content: "";
+      @include bgimgin("ic_quotes.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 80px;
+      height: 39px;
+      z-index: -1;
+    }
+    .wrapper-text {
+      text-align: center;
+      span {
+        font-family: $font_stack_roboto;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+        font-style: italic;
+      }
+    }
+  }
+}

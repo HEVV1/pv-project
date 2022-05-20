@@ -1,0 +1,111 @@
+.block-employee {
+  position: relative;
+  width: 100%;
+  border: 1px solid $color_8;
+  transition: ease-in-out $default_transition_time;
+  &.warning-absence{
+    .wrapper-employee {
+      .image {
+        background-color: $color_26;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i{
+          color: $color_7;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+  .wrapper-employee {
+    width: 100%;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    .image {
+      flex: 1 0 auto;
+      width: 68px;
+      height: 68px;
+      max-width: 68px;
+      max-height: 68px;
+      border-radius: 100%;
+    }
+    .wrapper-employee-data {
+      margin-left: 23px;
+      .wrapper-text {
+        h5 {
+          margin: 0;
+          line-height: unset;
+          color: $color_3;
+        }
+        h3 {
+          margin-top: 8px;
+          margin-bottom: 8px;
+          line-height: unset;
+        }
+        span {
+          font-size: 14px;
+          color: rgba($color: $color_4, $alpha: 0.5);
+        }
+      }
+    }
+  }
+  .wrapper-status {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    display: flex;
+    align-items: center;
+    .wrapper-text {
+      margin-left: 7px;
+      margin-right: 7px;
+      .text-warning {
+        font-family: $default_font_heading;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 17px;
+        color: $color_18;
+        text-transform: uppercase;
+      }
+    }
+    .wrapper-icon {
+      cursor: default;
+      i {
+        color: $color_18;
+      }
+      &:hover {
+        + .block-popup {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &:hover {
+    box-shadow: 0px 0px 24px 0px rgb(0 0 0 / 0.2);
+  }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .block-employee {
+    .wrapper-status {
+      .wrapper-text {
+        margin: 0;
+        .text-warning {
+          display: none;
+        }
+      }
+      .wrapper-icon {
+        padding: 5px;
+      }
+      .block-popup {
+        right: -7px;
+        left: unset;
+        transform: unset;
+      }
+    }
+  }
+}

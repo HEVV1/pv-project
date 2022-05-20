@@ -1,0 +1,69 @@
+.block-vacancy {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  .wrapper-vacancy {
+    display: flex;
+    align-items: center;    
+    .wrapper-image {
+      min-width: 110px;
+      min-height: 105px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .wrapper-content {
+      padding-left: 30px;
+      width: 100%;
+      .wrapper-salary-date {
+        display: flex;
+        align-items: center;
+        .salary {
+          padding-left: 12px;
+          padding-right: 12px;
+          margin-right: 10px;
+          background-color: $color_3;
+          span {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+          }
+        }
+      }
+      .wrapper-link {
+        margin-top: 10px;
+        a {
+          font-size: $default_font_heading;
+          color: $color_4;
+          font-weight: 700;
+          text-decoration: underline;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  &.vacancy-with-background{    
+    .wrapper-vacancy{
+      padding: 14px;
+      background-color: $color_1;
+      transition: ease-in-out $default_transition_time;
+    }
+    &:hover{
+      .wrapper-vacancy{
+        box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+      }      
+    }      
+  }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .block-vacancy {
+    .wrapper-vacancy {
+      .wrapper-image {
+        display: none;
+      }
+      .wrapper-content {
+        padding-left: 0;
+      }
+    }
+  }
+}

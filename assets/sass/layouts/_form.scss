@@ -1,0 +1,9 @@
+.layout-form {
+  .inputblock-message {
+    &.inputblock-message-error {
+      div {
+        color: $color_11;
+      }
+    }
+  }
+}

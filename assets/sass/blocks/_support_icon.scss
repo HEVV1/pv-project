@@ -1,0 +1,42 @@
+.block-support-icon {
+  width: 100%;
+  transition: ease-in-out $default_transition_time;
+  background-color: $color_1;
+  margin-top: 14.5px;
+  margin-bottom: 14.5px;
+  a {
+    min-height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .wrapper-support-icon {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      .wrapper-icon {
+        text-align: center;
+        i {
+          font-size: 48px;
+          color: $color_3;
+        }
+      }
+      .wrapper-text {
+        margin-top: 10px;
+      }
+    }
+  }
+  &:hover {
+    box-shadow: 0px 0px 24px 0px rgb(0 0 0 / 0.2);
+  }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: "lg") - 1px) {
+  .block-support-icon {
+    margin-top: -1px;
+    margin-bottom: -1px;
+    margin-left: -1px;
+    margin-right: -1px;
+    border: 1px solid $color_8;
+  }
+}

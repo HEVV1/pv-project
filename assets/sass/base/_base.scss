@@ -1,0 +1,39 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  /*height: 100%;*/ /* Setting height causes window to jump to top upon adding .overflow-hidden, but setting height to auto breaks sticky footer, min-height fixes it, but breaks .scrollTop() reading on safari, so add min-height in vh units on a child */
+  display: flex; /* IE11 sticky footer requires body to be flex */
+  flex-direction: column;
+  background-color: $color_9;
+  color: $default_font_color;
+  font-family: $default_font_stack;
+  line-height: $default_line_height;
+  font-weight: $default_font_weight;
+  overflow-x: hidden;
+}
+.wrapper-page {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+}
+.wrapper-page-header-and-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: ease-in-out $default_transition_time;
+  width: calc(100vw - 305px) !important;
+  &.inactive {
+    width: 100vw !important;
+  }
+}
+.wrapper-page-content {
+  flex: 1 0 auto;
+  padding-bottom: 0px;
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: "md") - 1px) {
+  .wrapper-page-header-and-content {
+    width: 100vw !important;
+  }
+}

@@ -1,0 +1,36 @@
+.button-filter {
+  text-align: right;
+  .wrapper-button-filter {
+    display: inline-block;
+    padding-left: 34px;
+    cursor: pointer;
+    span {
+      position: relative;
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -34px;
+        width: 24px;
+        height: 21px;
+        background-color: $color_3;
+        transform: translateY(-50%) skew(-15deg);
+      }
+      &::after {
+        content: "";
+        @include bgimgin("ic_filter.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        left: -34px;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 21px;
+      }
+    }
+  }
+}
